@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="cnsGameCounter/cnsGameCounter.csproj" />
+  <Project Path="libCore/libCore.csproj" />
+  <Project Path="wfaGameCounter/wfaGameCounter.csproj" />
+</Solution>

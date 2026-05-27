@@ -1,0 +1,44 @@
+﻿<Window x:Class="wpfBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfBinding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="254">
+    <Window.Resources>
+        <local:Hero x:Key="myHero" Name="Aladin" Clan="Vorishki" HP="90"/>
+        <local:HeroEx x:Key="myHeroEx" Name="Abu" Description="Litle monkey" HP="10"/>
+    </Window.Resources>
+    <StackPanel>
+        <TextBox x:Name="edFIO" Text="Иванов И. И."/>
+        <TextBlock Text="{Binding ElementName=edFIO,Path=Text}"/>
+        <TextBlock Text="{Binding ElementName=edFIO,Path=Text,
+            StringFormat=Привет\, {0} - {0} !!!!}"/>
+
+        <StackPanel Background="LightBlue">
+            <TextBlock Text="{Binding Source={StaticResource myHero},Path=Name}"/>
+            <TextBlock Text="{Binding Source={StaticResource myHero},Path=Clan}"/>
+            <TextBlock Text="{Binding Source={StaticResource myHero},Path=Description}"/>
+            <TextBlock Text="{Binding Source={StaticResource myHero},Path=HP}"/>
+        </StackPanel>
+
+        <StackPanel Background="LightYellow" DataContext="{StaticResource myHero}">
+            <TextBlock Text="{Binding Path=Name}"/>
+            <TextBlock Text="{Binding Path=Clan}"/>
+            <TextBlock Text="{Binding Path=Description}"/>
+            <TextBlock Text="{Binding Path=HP}"/>
+        </StackPanel>
+
+        <StackPanel Background="DimGray" DataContext="{StaticResource myHeroEx}">
+            <TextBox Text="{Binding Path=Name}"/>
+            <TextBox Text="{Binding Path=Clan}"/>
+            <TextBox Text="{Binding Path=Description}"/>
+            <TextBox Text="{Binding Path=HP}"/>
+            <Button Content="Put me" Click="Button_Click"/>
+            <Button Content="Return Name" Click="Button_Click_1" x:Name="buGetName"/>
+        </StackPanel>
+    </StackPanel>
+    
+    
+</Window>

@@ -1,0 +1,37 @@
+﻿<Window x:Class="wpfCommand.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfCommand"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Window.CommandBindings>
+        <CommandBinding Command="New" Executed="CommandNew_Executed"/>
+        <CommandBinding Command="Save" 
+                        Executed="CommandSave_Executed"
+                        CanExecute="CommandSave_CanExecute"/>
+        <CommandBinding Command="local:MyCommand.cmdAdd" 
+                Executed="CommandBinding_Execute"/>
+    </Window.CommandBindings>
+    
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top">
+            <Button Content="New" Command="New"/>
+            <Button Content="Save" Command="Save"/>
+
+            <Button Content="Cut" Command="ApplicationCommands.Cut" 
+                    CommandTarget="{Binding ElementName=EdNote}"/>
+            <Button Content="Copy" Command="Copy" 
+                    CommandTarget="{Binding ElementName=EdNote}"/>
+            <Button Content="Paste" Command="Paste" 
+                    CommandTarget="{Binding ElementName=EdNote}"/>
+
+            <Button Content="Adding 'HAHA'" Command="local:MyCommand.cmdAdd"/>
+        </StackPanel>
+
+        <TextBox x:Name="EdNote" 
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Visible"/>
+    </DockPanel>
+</Window>

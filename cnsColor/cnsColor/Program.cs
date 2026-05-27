@@ -1,15 +1,18 @@
-﻿Console.ForegroundColor = ConsoleColor.Cyan;
-Console.BackgroundColor = ConsoleColor.White;
-Console.WriteLine("Зеленый текст на белом фоне");
+﻿
+Console.ForegroundColor = ConsoleColor.Red;
+Console.BackgroundColor = ConsoleColor.Green;
+Console.WriteLine("Красный текст, на зелённом фоне");
 Console.ResetColor();
-Console.WriteLine("Обычный");
+Console.WriteLine("Usual text");
+Console.WriteLine();
+Console.WriteLine(new string('-', 80));
 
-Console.WriteLine(new string('_', 30));
+// Q: Как распечатать все доступные цвета в столбик
 
 Console.WriteLine("ConsoleColor:");
 foreach (var i in Enum.GetValues<ConsoleColor>())
 {
-    Console.Write($"{i:X} \t {i:D} \t");
+    Console.Write($"{i:X} | {i,2:D} | ");
     Console.BackgroundColor = i;
     Console.WriteLine(i);
     Console.ResetColor();

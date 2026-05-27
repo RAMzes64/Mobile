@@ -1,0 +1,26 @@
+﻿<Window x:Class="wpfStyleTriggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfStyleTriggers"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="50"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="FontSize" Value="50"/>
+                    <Setter Property="Margin" Value="10 0 10 0"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Button Content="1"/>
+        <Button Content="2"/>
+        <Button Content="3"/>
+        <Button Content="4"/>
+    </StackPanel>
+</Window>

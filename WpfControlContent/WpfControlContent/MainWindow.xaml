@@ -1,0 +1,27 @@
+﻿<Window x:Class="wpfControlContent.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfControlContent"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Column="0" x:Name="buAdd">
+            <Button.Content>
+                <StackPanel>
+                    <Label Content="1111"/>
+                    <Label Content="2222" Background="Yellow"/>
+                    <Label Content="3333"/>
+                    <CheckBox Content="Yes?"/>
+                    <Button Content="0000000"/>
+                    <Image Source="/Resources/цй.png" Width="90"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+    </Grid>
+</Window>

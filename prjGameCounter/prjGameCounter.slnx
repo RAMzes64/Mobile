@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="cnsGameCounter/cnsGameCounter.csproj" />
   <Project Path="libCore/libCore.csproj" />
+  <Project Path="WindowsFormsApp2/WindowsFormsApp2.csproj" Id="622de8a3-9641-4639-9bc5-932501dacbe6" />
 </Solution>
