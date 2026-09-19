@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ConsoleApp1/ConsoleApp1.csproj" Id="7dc9a0f9-b2f0-4cef-ab66-a47c1ea37e80" />
+  <Project Path="FairyChess.Core/FairyChess.Core.csproj" />
+  <Project Path="FairyChess.Wpf/FairyChess.Wpf.csproj" Id="b97e0b78-9e19-4391-a326-3e0cee9ef9a5" />
+</Solution>

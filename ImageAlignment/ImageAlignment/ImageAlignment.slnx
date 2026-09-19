@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ImageAlignmentDesktop/ImageAlignmentDesktop.csproj" Id="02ada316-00a8-4259-b4d6-41c76726fe1b" />
+  <Project Path="ImageAlignmentLib/ImageAlignmentLib.csproj" />
+  <Project Path="Test/Test.csproj" />
+</Solution>
